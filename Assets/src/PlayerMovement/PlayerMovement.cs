@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	// TODO: need to class ships somehow?
 	//speed controls
-	private float maxSpeed = 5f;
-	private float maxRotSpeed = 180f;
+	public float maxSpeed = 5f;
+	public float maxRotSpeed = 180f;
+
+	public float shipBoundryRadius = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +44,32 @@ public class PlayerMovement : MonoBehaviour {
 		Vector3 pos = transform.position;
 		Vector3 direction = new Vector3 (0, Input.GetAxis ("Vertical") * maxSpeed * Time.deltaTime, 0);
 		pos += rot * direction;
+
+		// Start restrict movement to the cameras bounds
+		if (pos.y + shipBoundryRadius > Camera.main.orthographicSize) {
+			pos.y = Camera.main.orthographicSize - shipBoundryRadius;
+		}
+
+		if (pos.y - shipBoundryRadius < -Camera.main.orthographicSize) {
+			pos.y = -Camera.main.orthographicSize + shipBoundryRadius;
+		}
+
+		float screenRatio = Screen.width / Screen.height; // THIS IS A BAD WAY TO DO THE THING
+		float widthOrtho = Camera.main.orthographicSize * screenRatio;
+
+		if (pos.x + shipBoundryRadius > widthOrtho) {
+			pos.x = widthOrtho - shipBoundryRadius;
+		}
+
+		if (pos.x - shipBoundryRadius < -widthOrtho) {
+			pos.x = -widthOrtho + shipBoundryRadius;
+		}
+
+		// faking the width of the screen
+
+
+		// End restrict movement to the camera bounds
+
 
 		transform.position = pos;
 	}
