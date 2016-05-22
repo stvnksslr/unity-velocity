@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour {
 			pos.y = -Camera.main.orthographicSize + shipBoundryRadius;
 		}
 
-		float screenRatio = Screen.width / Screen.height; // THIS IS A BAD WAY TO DO THE THING
+		float screenRatio = (float)Screen.width / (float)Screen.height; // THIS IS A BAD WAY TO DO THE THING
 		float widthOrtho = Camera.main.orthographicSize * screenRatio;
 
 		if (pos.x + shipBoundryRadius > widthOrtho) {

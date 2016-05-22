@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\src\PlayerMovement\Damage\DamageHandler.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerCamera.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerMovement.cs" />
      <None Include="Assets\SpaceShooterRedux\Spritesheet\sheet.xml" />
