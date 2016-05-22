@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\src\PlayerMovement\Damage\DamageHandler.cs" />
+     <Compile Include="Assets\src\PlayerMovement\Damage\PlayerBallistics.cs" />
+     <Compile Include="Assets\src\PlayerMovement\Damage\PlayerShooting.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerCamera.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerMovement.cs" />
      <None Include="Assets\Art\UI Pack Pixel Edition (750 assets)\spritesheetInfo.txt" />
