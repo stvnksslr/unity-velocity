@@ -5,7 +5,6 @@ public class DamageHandler : MonoBehaviour {
 
 	int health = 10;
 
-
 	void OnCollisionEnter2D(Collision2D coll) {
 		Debug.Log ("Collision!");
 
