@@ -48,8 +48,10 @@
      <Compile Include="Assets\src\PlayerMovement\Damage\DamageHandler.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerCamera.cs" />
      <Compile Include="Assets\src\PlayerMovement\PlayerMovement.cs" />
-     <None Include="Assets\SpaceShooterRedux\Spritesheet\sheet.xml" />
-     <None Include="Assets\SpaceShooterRedux\license.txt" />
+     <None Include="Assets\art\SpaceShooterRedux\Spritesheet\sheet.xml" />
+     <None Include="Assets\art\UI pack Space\license.txt" />
+     <None Include="Assets\art\SpaceShooterRedux\license.txt" />
+     <None Include="Assets\art\UI pack Space\Spritesheet\uipackSpace_sheet.xml" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
